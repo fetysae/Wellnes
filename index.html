@@ -459,6 +459,38 @@
   .spatial-visual .zone-mini .num { font-family: 'Fraunces', serif; font-size: 22px; color: var(--accent); }
   .spatial-visual .zone-mini.back { grid-column: 1 / -1; }
 
+  .area-grid {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
+    margin: 28px 0 42px;
+  }
+  .area-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(244,246,244,0.96));
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+  .area-card::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--gold));
+  }
+  .area-card .area-badge {
+    display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--secondary); margin-bottom: 12px;
+  }
+  .area-card h4 {
+    font-family: 'Fraunces', serif; font-size: 20px; color: var(--primary-deep);
+    line-height: 1.2; margin-bottom: 10px;
+  }
+  .area-card p {
+    font-size: 13.5px; color: var(--ink-soft); line-height: 1.65;
+  }
+  @media (max-width: 1100px) { .area-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .area-grid { grid-template-columns: 1fr; margin-top: 20px; } }
+
   .zone-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
   }
@@ -1059,6 +1091,49 @@
           <div class="num">04</div>
         </div>
       </div>
+    </div>
+
+    <div class="area-grid" aria-label="Area layout program">
+      <article class="area-card">
+        <div class="area-badge">Area 01</div>
+        <h4>Gym Muslimah</h4>
+        <p>Zona latihan khusus perempuan dengan desain privat, pencahayaan lembut, dan sistem keamanan yang nyaman untuk aktivitas rutin.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 02</div>
+        <h4>Gym Umum</h4>
+        <p>Area utama untuk strength, cardio, dan latihan fungsional dengan flow yang terorganisir dan akses mudah untuk semua member.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 03</div>
+        <h4>Gym Private</h4>
+        <p>Ruangan personal training premium untuk sesi eksklusif, coaching 1-on-1, dan program khusus berkapasitas kecil.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 04</div>
+        <h4>Health Cafe &amp; Bar</h4>
+        <p>Area cafe sehat dengan konsep santai, menu recovery, minuman functional, hingga layanan hangout pasca latihan.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 05</div>
+        <h4>Chilling Room</h4>
+        <p>Ruang recovery yang tenang untuk bersantai setelah sesi latihan, dilengkapi suasana hangat dan estetika natural.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 06</div>
+        <h4>Receptionist</h4>
+        <p>Front desk dengan identity visual premium, proses check-in yang cepat, dan area branding member yang rapi.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 07</div>
+        <h4>Room Relaksasi</h4>
+        <p>Zone recovery dan wellness dengan kursi pijat, area aromaterapi, hingga sesi relaksasi untuk meningkatkan pengalaman member.</p>
+      </article>
+      <article class="area-card">
+        <div class="area-badge">Area 08</div>
+        <h4>Area Exhibition Equipment</h4>
+        <p>Area display perlengkapan fitness premium, produk recovery, dan alat latihan utama untuk mendukung brand positioning klub.</p>
+      </article>
     </div>
 
     <!-- ZONE GRID -->
