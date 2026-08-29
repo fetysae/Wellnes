@@ -49,6 +49,7 @@
       radial-gradient(circle at 88% 92%, rgba(140, 98, 57, 0.06) 0, transparent 40%);
     background-attachment: fixed;
   }
+
   .serif { font-family: 'Fraunces', Georgia, serif; }
 
   .container { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
@@ -87,7 +88,81 @@
     text-decoration: none; transition: all 0.25s ease; border: 1px solid var(--primary-deep);
   }
   .topbar-cta:hover { background: var(--primary); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-  @media (max-width: 880px) { .topnav { display: none; } }
+  @media (max-width: 880px) {
+    .topnav { display: none; }
+    .topbar-inner { gap: 12px; }
+    .brand-sub { letter-spacing: 0.05em; }
+    .topbar-cta { padding: 9px 12px; font-size: 11.5px; }
+  }
+  @media (max-width: 560px) {
+    .container { padding: 0 18px; }
+    .topbar-inner {
+      height: auto;
+      padding: 10px 0;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .brand {
+      flex: 1;
+      min-width: 0;
+      align-items: flex-start;
+    }
+    .brand-mark { width: 32px; height: 32px; }
+    .brand-name { font-size: 13px; }
+    .brand-sub { font-size: 9px; line-height: 1.4; }
+    .topbar-cta { display: none; }
+    .hero { padding: 64px 0 52px; }
+    .hero-meta { gap: 8px; }
+    .hero-chip { width: 100%; justify-content: flex-start; }
+    .hero-stats { grid-template-columns: 1fr; padding: 18px; }
+    .hero-stat .num { font-size: 28px; }
+    .hero-stat .lbl { font-size: 12px; }
+    .section-head { margin-bottom: 36px; }
+    .exec-alliance,
+    .spatial-intro,
+    .trend-block,
+    .risk-box,
+    .persona-card,
+    .zone-body {
+      padding: 22px 18px;
+    }
+    .market-stats,
+    .persona-grid,
+    .zone-grid,
+    .risk-grid,
+    .spatial-intro,
+    .exec-alliance,
+    .trend-block {
+      grid-template-columns: 1fr;
+    }
+    .market-stats { margin-bottom: 32px; }
+    .persona-card { padding: 24px 18px; }
+    .persona-head { align-items: center; }
+    .trend-bullets li,
+    .exec-alliance .exec-points li { padding: 12px 14px; }
+    .zone-metrics { grid-template-columns: 1fr; }
+    .compare-wrap { margin-bottom: 32px; }
+    .compare-footnote { padding: 14px 16px; }
+    .risk-head { align-items: flex-start; }
+    .timeline::before { left: 18px; }
+    .tl-phase-inner { grid-template-columns: 42px 1fr; gap: 12px; }
+    .tl-node {
+      width: 42px;
+      height: 42px;
+      border-width: 2px;
+      margin: 0;
+    }
+    .tl-week { font-size: 11px; }
+    .tl-week .small { font-size: 7px; }
+    .tl-content { padding: 20px 16px; }
+    .closing { margin-top: 20px; }
+    .closing-inner { padding: 0 12px; }
+    .closing-btns { flex-direction: column; }
+    .btn-primary,
+    .btn-ghost { width: 100%; text-align: center; }
+    footer.site { margin-top: 48px; }
+    .foot-grid { flex-direction: column; text-align: center; }
+  }
 
   /* ============ HERO ============ */
   .hero {
