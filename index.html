@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Integrated Strategic Blueprint — Forest Wellness Gym & Community Hub × Emerald Tree Bintaro Sektor 9</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #F4F6F4;
+    --bg-soft: #EAEEE7;
+    --bg-card: #FFFFFF;
+    --primary: #1E3F20;
+    --primary-deep: #132A13;
+    --secondary: #708D81;
+    --secondary-soft: #A3B19B;
+    --accent: #8C6239;
+    --gold: #C9A24B;
+    --ink: #1A2620;
+    --ink-soft: #4A5A50;
+    --ink-muted: #7B8A82;
+    --line: #DDE4DC;
+    --danger-bg: #FBEEE3;
+    --danger-border: #E0A374;
+    --danger-ink: #6B3B1A;
+    --shadow-sm: 0 1px 2px rgba(19, 42, 19, 0.04), 0 4px 12px rgba(19, 42, 19, 0.04);
+    --shadow-md: 0 8px 28px rgba(19, 42, 19, 0.08);
+    --shadow-lg: 0 24px 60px rgba(19, 42, 19, 0.14);
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
+    --max: 1200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(112, 141, 129, 0.10) 0, transparent 36%),
+      radial-gradient(circle at 88% 92%, rgba(140, 98, 57, 0.06) 0, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  .serif { font-family: 'Fraunces', Georgia, serif; }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* ============ TOPBAR ============ */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(244, 246, 244, 0.82);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: grid; place-items: center; color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), var(--shadow-sm);
+  }
+  .brand-mark svg { width: 20px; height: 20px; }
+  .brand-name { font-weight: 700; color: var(--primary-deep); letter-spacing: -0.01em; font-size: 15px; }
+  .brand-sub { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+  .topnav { display: flex; gap: 4px; }
+  .topnav a {
+    color: var(--ink-soft); text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 8px 14px; border-radius: 999px; transition: all 0.25s ease;
+  }
+  .topnav a:hover { color: var(--primary-deep); background: var(--bg-soft); }
+  .topbar-cta {
+    background: var(--primary-deep); color: #E8F0E8;
+    padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: all 0.25s ease; border: 1px solid var(--primary-deep);
+  }
+  .topbar-cta:hover { background: var(--primary); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  @media (max-width: 880px) { .topnav { display: none; } }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; padding: 96px 0 88px; overflow: hidden;
+    background:
+      radial-gradient(circle at 80% 10%, rgba(201, 162, 75, 0.10) 0, transparent 45%),
+      linear-gradient(180deg, #1E3F20 0%, #132A13 100%);
+    color: #E8F0E8;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 18% 82%, rgba(112, 141, 129, 0.22) 0, transparent 32%),
+      radial-gradient(circle at 92% 28%, rgba(140, 98, 57, 0.18) 0, transparent 38%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 64px;
+    background: linear-gradient(180deg, transparent, var(--bg));
+    pointer-events: none;
+  }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 72px 0 64px; } }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(201, 162, 75, 0.32);
+    color: var(--gold); padding: 6px 14px; border-radius: 999px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+  .hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 600;
+    font-size: clamp(34px, 4.6vw, 58px); line-height: 1.08; letter-spacing: -0.02em;
+    color: #F7FBF6;
+  }
+  .hero h1 .accent { color: var(--gold); font-style: italic; font-weight: 500; }
+  .hero p.lead {
+    margin-top: 24px; font-size: 17px; line-height: 1.65; max-width: 620px;
+    color: #C7D6C8;
+  }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .hero-chip {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 14px; border-radius: 10px; font-size: 13px; color: #DDE6DC;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .hero-chip svg { width: 14px; height: 14px; color: var(--secondary-soft); }
+
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10);
+    padding: 28px; border-radius: var(--radius-lg); backdrop-filter: blur(10px);
+  }
+  .hero-stat { padding: 14px 0; }
+  .hero-stat .num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; color: var(--gold); line-height: 1; }
+  .hero-stat .lbl { font-size: 12px; color: #B4C5B5; margin-top: 8px; line-height: 1.45; }
+  .hero-stat + .hero-stat { /* spacing handled by grid gap */ }
+
+  /* ============ SECTION SHELL ============ */
+  section.chapter { padding: 88px 0; }
+  @media (max-width: 760px) { section.chapter { padding: 56px 0; } }
+  .section-head { max-width: 760px; margin-bottom: 56px; }
+  .chapter-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--secondary); font-size: 12px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .chapter-tag .num {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--primary-deep); color: var(--gold);
+    display: grid; place-items: center; font-family: 'Fraunces', serif; font-size: 14px;
+  }
+  .section-head h2 {
+    font-family: 'Fraunces', serif; font-weight: 600;
+    font-size: clamp(28px, 3.4vw, 42px); line-height: 1.15; letter-spacing: -0.015em;
+    color: var(--primary-deep);
+  }
+  .section-head p {
+    margin-top: 16px; font-size: 16px; color: var(--ink-soft); line-height: 1.7;
+  }
+
+  /* ============ EXEC ALLIANCE BLOCK ============ */
+  .exec-alliance {
+    background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary) 55%, var(--secondary) 100%);
+    color: #E8F0E8; border-radius: var(--radius-lg); padding: 44px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 900px) { .exec-alliance { grid-template-columns: 1fr; padding: 28px; gap: 24px; } }
+  .exec-alliance::before {
+    content: ""; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(201, 162, 75, 0.22), transparent 70%);
+    pointer-events: none;
+  }
+  .exec-alliance .exec-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201, 162, 75, 0.16); border: 1px solid rgba(201, 162, 75, 0.42);
+    color: var(--gold); padding: 6px 14px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .exec-alliance h3 {
+    font-family: 'Fraunces', serif; font-size: 28px; font-weight: 600; line-height: 1.18;
+    color: #F7FBF6; margin-bottom: 18px; letter-spacing: -0.01em;
+  }
+  .exec-alliance h3 em { color: var(--gold); font-style: italic; }
+  .exec-alliance p { color: #C7D6C8; font-size: 15px; line-height: 1.78; margin-bottom: 14px; }
+  .exec-alliance .exec-points { list-style: none; display: grid; gap: 12px; position: relative; z-index: 1; }
+  .exec-alliance .exec-points li {
+    background: rgba(255,255,255,0.06); border-left: 3px solid var(--gold);
+    padding: 14px 16px; border-radius: 8px; font-size: 13.5px; color: #DDE6DC; line-height: 1.6;
+  }
+  .exec-alliance .exec-points li strong { color: var(--gold); display: block; margin-bottom: 4px; font-weight: 600; letter-spacing: 0.02em; }
+
+  /* ============ BAB 1 — MARKET ============ */
+  .market-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px;
+  }
+  @media (max-width: 900px) { .market-stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat-card {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 24px;
+    box-shadow: var(--shadow-sm); transition: all 0.3s ease;
+  }
+  .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--secondary-soft); }
+  .stat-card .label { font-size: 12px; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .stat-card .value { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 600; color: var(--primary-deep); margin-top: 6px; line-height: 1.1; }
+  .stat-card .note { font-size: 13px; color: var(--ink-soft); margin-top: 8px; line-height: 1.5; }
+
+  .persona-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 56px;
+  }
+  @media (max-width: 900px) { .persona-grid { grid-template-columns: 1fr; } }
+  .persona-card {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 32px;
+    box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+    transition: all 0.35s ease;
+  }
+  .persona-card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+  }
+  .persona-card.secondary::before { background: linear-gradient(90deg, var(--accent), var(--gold)); }
+  .persona-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .persona-head { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 18px; }
+  .persona-icon {
+    flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px;
+    background: var(--bg-soft); color: var(--primary);
+    display: grid; place-items: center;
+  }
+  .persona-card.secondary .persona-icon { background: #F7EFE2; color: var(--accent); }
+  .persona-icon svg { width: 24px; height: 24px; }
+  .persona-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--secondary); margin-bottom: 4px;
+  }
+  .persona-card.secondary .persona-tag { color: var(--accent); }
+  .persona-card h3 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--primary-deep); letter-spacing: -0.01em; }
+  .persona-card p { color: var(--ink-soft); font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
+  .persona-list { list-style: none; display: grid; gap: 8px; }
+  .persona-list li {
+    display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); line-height: 1.55;
+  }
+  .persona-list li::before {
+    content: ""; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--secondary); margin-top: 9px;
+  }
+  .persona-card.secondary .persona-list li::before { background: var(--accent); }
+
+  .trend-block {
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+    color: #E8F0E8; border-radius: var(--radius-lg); padding: 40px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center;
+    box-shadow: var(--shadow-md); position: relative; overflow: hidden;
+  }
+  @media (max-width: 900px) { .trend-block { grid-template-columns: 1fr; padding: 28px; } }
+  .trend-block::before {
+    content: ""; position: absolute; top: -40px; right: -40px; width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(201, 162, 75, 0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .trend-block h3 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 600; line-height: 1.2;
+    color: #F7FBF6; margin-bottom: 16px;
+  }
+  .trend-block h3 em { color: var(--gold); font-style: italic; }
+  .trend-block p { color: #C7D6C8; font-size: 15px; line-height: 1.75; margin-bottom: 14px; }
+  .trend-bullets { list-style: none; display: grid; gap: 14px; }
+  .trend-bullets li {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10);
+    padding: 16px 18px; border-radius: var(--radius-sm); font-size: 14px; color: #DDE6DC;
+  }
+  .trend-bullets li strong { color: var(--gold); display: block; margin-bottom: 4px; font-weight: 600; }
+
+  /* ============ BAB 2 — ZONING ============ */
+  .spatial-intro {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-lg);
+    padding: 36px; box-shadow: var(--shadow-sm); margin-bottom: 48px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+  }
+  @media (max-width: 900px) { .spatial-intro { grid-template-columns: 1fr; padding: 28px; } }
+  .spatial-intro h3 { font-family: 'Fraunces', serif; font-size: 24px; color: var(--primary-deep); margin-bottom: 14px; }
+  .spatial-intro p { color: var(--ink-soft); font-size: 15px; line-height: 1.75; margin-bottom: 12px; }
+  .spatial-intro .solutions { display: grid; gap: 10px; margin-top: 16px; }
+  .spatial-intro .solutions li {
+    background: var(--bg-soft); border-left: 3px solid var(--secondary);
+    padding: 10px 14px; border-radius: 8px; font-size: 14px; color: var(--ink);
+    list-style: none;
+  }
+  .spatial-intro .solutions li strong { color: var(--primary-deep); }
+
+  .spatial-visual {
+    background: linear-gradient(135deg, #EAEEE7, #DDE7DC);
+    border-radius: var(--radius); padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px;
+    min-height: 280px;
+  }
+  .spatial-visual .zone-mini {
+    background: rgba(255,255,255,0.7); border: 1px dashed rgba(30, 63, 32, 0.25);
+    border-radius: 10px; padding: 12px; font-size: 12px; color: var(--primary-deep);
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .spatial-visual .zone-mini .label { font-weight: 700; letter-spacing: 0.04em; }
+  .spatial-visual .zone-mini .num { font-family: 'Fraunces', serif; font-size: 22px; color: var(--accent); }
+  .spatial-visual .zone-mini.back { grid-column: 1 / -1; }
+
+  .zone-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  }
+  @media (max-width: 900px) { .zone-grid { grid-template-columns: 1fr; } }
+  .zone-card {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-sm); transition: all 0.35s ease;
+    display: flex; flex-direction: column;
+  }
+  .zone-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+  .zone-banner {
+    padding: 24px 28px; color: #F7FBF6; position: relative; overflow: hidden;
+  }
+  .zone-banner::after {
+    content: ""; position: absolute; right: -30px; top: -30px; width: 140px; height: 140px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+  }
+  .zone-banner.z1 { background: linear-gradient(135deg, #8C6239, #6B4A28); }
+  .zone-banner.z2 { background: linear-gradient(135deg, #1E3F20, #132A13); }
+  .zone-banner.z3 { background: linear-gradient(135deg, #708D81, #4F6B5A); }
+  .zone-banner.z4 { background: linear-gradient(135deg, #C9A24B, #8C6239); }
+  .zone-banner .zlabel { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.85; }
+  .zone-banner h3 { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-top: 6px; }
+  .zone-banner .znum {
+    position: absolute; right: 24px; bottom: 16px;
+    font-family: 'Fraunces', serif; font-size: 56px; font-weight: 600; opacity: 0.22; line-height: 1;
+  }
+  .zone-body { padding: 28px; flex-grow: 1; display: flex; flex-direction: column; }
+  .zone-body p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.75; margin-bottom: 18px; }
+  .zone-features { list-style: none; display: grid; gap: 8px; margin-bottom: 18px; }
+  .zone-features li {
+    font-size: 13.5px; color: var(--ink); display: flex; gap: 10px; align-items: flex-start; line-height: 1.55;
+  }
+  .zone-features li::before {
+    content: "✦"; color: var(--gold); font-size: 12px; margin-top: 2px;
+  }
+  .zone-metrics {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: auto;
+    padding-top: 18px; border-top: 1px solid var(--line);
+  }
+  .zone-metric .m-lbl { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .zone-metric .m-val { font-family: 'Fraunces', serif; font-size: 18px; color: var(--primary-deep); font-weight: 600; }
+
+  /* ============ BAB 3 — PARTNERSHIP & RISK ============ */
+  .compare-wrap {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 8px; box-shadow: var(--shadow-md);
+    overflow: hidden; margin-bottom: 48px;
+  }
+  .compare-table { width: 100%; border-collapse: collapse; }
+  .compare-table thead th {
+    text-align: left; padding: 22px 20px; font-size: 13px; font-weight: 700;
+    color: var(--primary-deep); letter-spacing: 0.04em; border-bottom: 2px solid var(--line);
+    background: var(--bg-soft);
+  }
+  .compare-table thead th .opt-tag {
+    display: block; font-size: 11px; color: var(--secondary); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 4px;
+  }
+  .compare-table thead th.recommended { background: linear-gradient(135deg, rgba(30, 63, 32, 0.06), rgba(112, 141, 129, 0.10)); }
+  .compare-table thead th .rec-pill {
+    display: inline-block; background: var(--primary-deep); color: var(--gold);
+    font-size: 10px; padding: 3px 8px; border-radius: 999px; letter-spacing: 0.1em; margin-top: 6px;
+  }
+  .compare-table tbody td {
+    padding: 18px 20px; font-size: 14px; color: var(--ink); line-height: 1.6;
+    border-bottom: 1px solid var(--line); vertical-align: top;
+  }
+  .compare-table tbody tr:last-child td { border-bottom: none; }
+  .compare-table tbody td:first-child { font-weight: 600; color: var(--primary-deep); background: var(--bg-soft); width: 22%; }
+  .compare-table tbody tr:hover td { background: #F8FBF8; }
+  .compare-table tbody tr:hover td:first-child { background: var(--bg-soft); }
+  .compare-footnote {
+    padding: 16px 24px; background: var(--bg-soft); border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    font-size: 12.5px; color: var(--ink-muted); border-top: 1px solid var(--line);
+  }
+  @media (max-width: 760px) {
+    .compare-wrap { overflow-x: auto; }
+    .compare-table { min-width: 760px; }
+  }
+
+  .risk-box {
+    background: var(--danger-bg); border: 1px solid var(--danger-border);
+    border-radius: var(--radius-lg); padding: 32px; position: relative; overflow: hidden;
+    box-shadow: 0 8px 28px rgba(224, 163, 116, 0.18);
+  }
+  @media (max-width: 760px) { .risk-box { padding: 24px; } }
+  .risk-box::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+    background: linear-gradient(180deg, #E0A374, #C25A1F);
+  }
+  .risk-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .risk-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: #C25A1F; color: #fff; display: grid; place-items: center; flex-shrink: 0;
+  }
+  .risk-icon svg { width: 22px; height: 22px; }
+  .risk-head h3 { font-family: 'Fraunces', serif; font-size: 22px; color: var(--danger-ink); font-weight: 600; }
+  .risk-head .risk-sub { font-size: 12px; color: #8B5A2B; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+  .risk-box > p { color: #6B3B1A; font-size: 14.5px; line-height: 1.7; margin-bottom: 20px; }
+  .risk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  @media (max-width: 760px) { .risk-grid { grid-template-columns: 1fr; } }
+  .risk-item {
+    background: rgba(255,255,255,0.65); border: 1px solid rgba(224, 163, 116, 0.4);
+    border-radius: var(--radius); padding: 20px;
+  }
+  .risk-item .ri-tag {
+    display: inline-block; background: #C25A1F; color: #fff;
+    font-size: 10px; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 10px;
+  }
+  .risk-item h4 { font-size: 15px; color: var(--danger-ink); margin-bottom: 8px; font-weight: 700; }
+  .risk-item p { font-size: 13.5px; color: #6B3B1A; line-height: 1.65; }
+
+  /* ============ BAB 4 — TIMELINE ============ */
+  .timeline {
+    position: relative; padding: 24px 0;
+  }
+  .timeline::before {
+    content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, var(--secondary-soft), var(--secondary), var(--primary), var(--accent));
+    transform: translateX(-50%);
+  }
+  @media (max-width: 880px) {
+    .timeline::before { left: 24px; }
+  }
+  .tl-phase { position: relative; margin-bottom: 56px; }
+  .tl-phase:last-child { margin-bottom: 0; }
+  .tl-phase-inner {
+    display: grid; grid-template-columns: 1fr 80px 1fr; gap: 24px; align-items: center;
+  }
+  @media (max-width: 880px) {
+    .tl-phase-inner { grid-template-columns: 60px 1fr; gap: 16px; }
+    .tl-phase .tl-content.right { grid-column: 2; }
+    .tl-phase .tl-empty { display: none; }
+  }
+  .tl-node {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--bg-card); border: 3px solid var(--primary);
+    display: grid; place-items: center; margin: 0 auto; position: relative; z-index: 2;
+    box-shadow: var(--shadow-md); transition: transform 0.3s ease;
+  }
+  .tl-phase:hover .tl-node { transform: scale(1.06); }
+  .tl-node .tl-week { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; color: var(--primary-deep); text-align: center; line-height: 1.1; }
+  .tl-node .tl-week .small { font-size: 10px; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.08em; }
+  .tl-phase.p2 .tl-node { border-color: var(--accent); }
+  .tl-phase.p2 .tl-node .tl-week { color: var(--accent); }
+  .tl-phase.p3 .tl-node { border-color: var(--gold); background: linear-gradient(135deg, #FFF8E6, #fff); }
+  .tl-phase.p3 .tl-node .tl-week { color: #8B6A1F; }
+
+  .tl-content {
+    background: var(--bg-card); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 28px;
+    box-shadow: var(--shadow-sm); transition: all 0.3s ease;
+  }
+  .tl-content:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .tl-content.right { text-align: left; }
+  .tl-phase-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--bg-soft); color: var(--primary);
+    padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .tl-phase.p2 .tl-phase-tag { background: #F7EFE2; color: var(--accent); }
+  .tl-phase.p3 .tl-phase-tag { background: #FBF4DE; color: #8B6A1F; }
+  .tl-content h3 { font-family: 'Fraunces', serif; font-size: 22px; color: var(--primary-deep); margin-bottom: 12px; line-height: 1.25; }
+  .tl-content > p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.7; margin-bottom: 16px; }
+  .tl-tasks { list-style: none; display: grid; gap: 8px; }
+  .tl-tasks li {
+    display: flex; gap: 12px; align-items: flex-start; font-size: 13.5px; color: var(--ink); line-height: 1.55;
+    padding: 8px 0; border-bottom: 1px dashed var(--line);
+  }
+  .tl-tasks li:last-child { border-bottom: none; }
+  .tl-tasks li .check {
+    flex-shrink: 0; width: 18px; height: 18px; border-radius: 5px;
+    border: 1.5px solid var(--secondary); display: grid; place-items: center; margin-top: 1px;
+  }
+  .tl-tasks li .check svg { width: 11px; height: 11px; color: var(--secondary); }
+  .tl-phase.p2 .tl-tasks li .check { border-color: var(--accent); }
+  .tl-phase.p2 .tl-tasks li .check svg { color: var(--accent); }
+  .tl-phase.p3 .tl-tasks li .check { border-color: var(--gold); }
+  .tl-phase.p3 .tl-tasks li .check svg { color: var(--gold); }
+
+  .tl-deliv {
+    margin-top: 16px; padding: 12px 14px; background: var(--bg-soft);
+    border-radius: 8px; font-size: 12.5px; color: var(--primary-deep);
+  }
+  .tl-deliv strong { color: var(--accent); }
+
+  /* ============ CLOSING / CTA STRIP ============ */
+  .closing {
+    margin-top: 32px; padding: 56px 0;
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+    color: #E8F0E8; border-radius: var(--radius-lg);
+    position: relative; overflow: hidden;
+  }
+  .closing::before {
+    content: ""; position: absolute; top: -50%; right: -10%; width: 60%; height: 200%;
+    background: radial-gradient(circle, rgba(201, 162, 75, 0.10), transparent 60%);
+  }
+  .closing-inner { position: relative; text-align: center; max-width: 720px; margin: 0 auto; padding: 0 32px; }
+  .closing h2 { font-family: 'Fraunces', serif; font-size: clamp(26px, 3vw, 36px); color: #F7FBF6; margin-bottom: 16px; line-height: 1.2; }
+  .closing h2 em { color: var(--gold); font-style: italic; }
+  .closing p { color: #C7D6C8; font-size: 16px; line-height: 1.75; margin-bottom: 28px; }
+  .closing-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--primary-deep); padding: 14px 28px; border-radius: 999px;
+    font-weight: 700; text-decoration: none; font-size: 14px; transition: all 0.25s ease;
+    border: 1px solid var(--gold);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201, 162, 75, 0.35); }
+  .btn-ghost {
+    background: transparent; color: #E8F0E8; padding: 14px 28px; border-radius: 999px;
+    font-weight: 600; text-decoration: none; font-size: 14px; transition: all 0.25s ease;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+  /* ============ FOOTER ============ */
+  footer.site {
+    margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--line); background: var(--bg-soft);
+  }
+  .foot-grid { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .foot-meta { font-size: 13px; color: var(--ink-muted); }
+  .foot-meta strong { color: var(--primary-deep); }
+  .foot-conf { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 12h3v8h10v-8h3L12 2z"/><path d="M12 6v10"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Forest Wellness Hub</div>
+        <div class="brand-sub">× Emerald Tree Bintaro · Blueprint v2.0</div>
+      </div>
+    </div>
+    <nav class="topnav" aria-label="Navigasi Bab">
+      <a href="#bab1">01 · Pasar</a>
+      <a href="#bab2">02 · Zonasi</a>
+      <a href="#bab3">03 · Kemitraan</a>
+      <a href="#bab4">04 · Roadmap</a>
+    </nav>
+    <a href="#closing" class="topbar-cta">Unduh Ringkasan Eksekutif</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span>Integrated Blueprint · Confidential</div>
+      <h1>
+        Integrated Strategic Blueprint:<br>
+        <span class="accent">Forest Wellness Gym &amp; Community Hub</span><br>
+        × Emerald Tree, Bintaro Sektor 9
+      </h1>
+      <p class="lead">
+        Aliansi bisnis kebugaran premium &amp; revitalisasi aset komersial berbasis alam di <strong style="color:#F7FBF6">Emerald Tree Resto &amp; Coffee Bar</strong>,
+        Bintaro Sektor 9 — mengoptimalkan area terbuka hijau yang telah <em>established</em> menjadi ekosistem simbiotik
+        kuliner–kesehatan: performa atletis HYROX, privasi spiritual komunitas Muslimah, dan pendapatan multi-zona
+        bermargin tinggi tanpa perlu membeli lahan baru.
+      </p>
+      <div class="hero-meta">
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Emerald Tree · Bintaro Sektor 9
+        </span>
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          8-Minggu Eksekusi
+        </span>
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          4 Zona Pendapatan
+        </span>
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          Tap-In Alliance Model
+        </span>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">34%</div>
+        <div class="lbl">Proyeksi ROI Year-2 berbasis model tap-in alliance tanpa land acquisition.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">320</div>
+        <div class="lbl">Kapasitas Premium Member aktif yang dapat ditampung harian di 4 zona.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">+42%</div>
+        <div class="lbl">Optimasi area terbuka Emerald Tree yang sebelumnya underutilized menjadi zona revenue-generating.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">0</div>
+        <div class="lbl">Biaya akuisisi lahan di depan — aset fisik sudah <em>established</em> &amp; beroperasi.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAB 1 — MARKET ============ -->
+<section class="chapter" id="bab1">
+  <div class="container">
+    <div class="section-head">
+      <div class="chapter-tag"><span class="num">01</span> Bab Satu</div>
+      <h2>Analisis Aliansi Strategis &amp; Validasi Permintaan Pasar</h2>
+      <p>
+        Aliansi dengan Emerald Tree Bintaro Sektor 9 bukan sekadar pilihan lokasi — ia adalah keputusan strategis
+        yang mengubah struktur biaya dan kurva pertumbuhan. Resto &amp; coffee bar berkonsep taman tropis ini telah
+        memiliki <em>brand equity</em>, pelanggan setia, dan aset fisik hijau yang matang. Bab ini membedah mengapa
+        men-tap-in ke aset eksisting lebih cerdas dibanding membangun dari lahan kosong, lalu memvalidasi dua segmen
+        inti yang akan menopang arus kas harian.
+      </p>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY ALLIANCE -->
+    <div class="exec-alliance">
+      <div>
+        <span class="exec-tag">Executive Summary · The Alliance Logic</span>
+        <h3>Bukan Membeli Lahan. Kami <em>Men-Tap-In</em> ke Ekosistem yang Sudah Hidup.</h3>
+        <p>
+          Emerald Tree Resto &amp; Coffee Bar adalah <strong>aset langka</strong> di Bintaro Sektor 9 — sebuah taman
+          restoran tropis dengan kanopi pohon dewasa, vertical garden matang, dan atmosfer resort yang sudah
+          terbukti menarik segmen ibu-ibu kelas atas dan keluarga premium. Aliansi strategis kami tidak membeli tanah;
+          kami mengoptimalkan <strong>area terbuka yang underutilized</strong> di dalam footprint Emerald Tree untuk
+          membangun ekosistem simbiotik kuliner–kesehatan.
+        </p>
+        <p>
+          Model <em>tap-in alliance</em> ini menghapus biaya akuisisi lahan, memangkas waktu <em>time-to-market</em>
+          dari 18 bulan menjadi 8 minggu, dan langsung mewarisi basis pelanggan Emerald Tree sebagai <em>acquisition
+          funnel</em> untuk gym. Sebaliknya, Emerald Tree mendapatkan traffic tambahan dari anggota gym yang menjadi
+          pelanggan F&amp;B — <strong>win-win revenue amplification</strong>.
+        </p>
+      </div>
+      <ul class="exec-points">
+        <li>
+          <strong>Zero Land Acquisition Cost</strong>
+          Aset fisik (taman, kanopi, utilitas, IMB resto) sudah ada — CAPEX dialokasikan 100% ke equipment &amp; interior functional.
+        </li>
+        <li>
+          <strong>Pre-Validated Customer Base</strong>
+          Emerald Tree memiliki ± 1.200 pelanggan aktif bulanan yang segmennya 70% overlap dengan target gym.
+        </li>
+        <li>
+          <strong>Cross-Sell Revenue Loop</strong>
+          Member gym otomatis menjadi konsumen cafe; tamu cafe terpapar kelas intro — dua arus pendapatan saling mengisi.
+        </li>
+        <li>
+          <strong>Brand Equity Multiplier</strong>
+          Reputasi Emerald Tree sebagai garden dining premium langsung mengangkat positioning Forest Wellness Hub.
+        </li>
+      </ul>
+    </div>
+
+    <!-- MARKET STATS -->
+    <div class="market-stats">
+      <div class="stat-card">
+        <div class="label">TAM Radius 3 km</div>
+        <div class="value">± 95K</div>
+        <div class="note">Penduduk premium Bintaro Sektor 7–9 dengan daya beli tinggi &amp; gaya hidup wellness aktif.</div>
+      </div>
+      <div class="stat-card">
+        <div class="label"> Muslimah Premium</div>
+        <div class="value">38%</div>
+        <div class="note">Wanita berhijab usia 25–45 tahun di Bintaro yang aktif mencari fasilitas kebugaran private.</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Pertumbuhan HYROX ID</div>
+        <div class="value">+47%</div>
+        <div class="note">Pertumbuhan tahunan peserta HYROX &amp; functional racing di Indonesia (2022–2024).</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Avg Ticket F&amp;B</div>
+        <div class="value">Rp 95K</div>
+        <div class="note">Rata-rata tiket per transaksi Emerald Tree saat ini — cross-sell potensial untuk member gym.</div>
+      </div>
+    </div>
+
+    <!-- PERSONAS -->
+    <div class="persona-grid">
+      <article class="persona-card">
+        <div class="persona-head">
+          <div class="persona-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg>
+          </div>
+          <div>
+            <div class="persona-tag">Target Pasar Utama</div>
+            <h3>Ibu Kelas Atas &amp; Komunitas Muslimah Bintaro</h3>
+          </div>
+        </div>
+        <p>
+          Segmen ini bukan mencari gym; mereka mencari <strong>sanctuary</strong>. Ibu-ibu Bintaro Sektor 7–9 yang
+          aktif secara sosial — pengurus komunitas sekolah, hijabers community, pengusaha UMKM premium — memiliki
+          tuntutan simultan: kebugaran rutin, privasi visual total, estetika ruang yang layak diunggah ke media sosial,
+          serta keamanan spiritual yang menghormati batas <em>aurat</em>. Kebetulan, mereka <strong>sudah menjadi
+          pelanggan setia Emerald Tree</strong> untuk brunch &amp; coffee — inilah <em>captive audience</em> yang siap
+          di-onvert menjadi member gym.
+        </p>
+        <ul class="persona-list">
+          <li><strong>Privasi tertutup total:</strong> area khusus wanita dengan partisi solid, tanpa kaca eksternal, akses terkontrol.</li>
+          <li><strong>Estetika hijau &amp; natural:</strong> suasana hutan/taman buatan, bukan estetika gym industri dengan neon biru.</li>
+          <li><strong>Social hub berkelas:</strong> cafe organik sebagai ruang nongkrong pasca-workout, menjaga kebersamaan komunitas.</li>
+          <li><strong>Instruktur wanita bersertifikasi:</strong> kepastian keamanan spiritual dan kenyamanan komunikasi.</li>
+          <li><strong>Program ibu &amp; anak:</strong> slot pagi khusus dengan penitipan anak ringan agar tidak mengganggu jadwal.</li>
+        </ul>
+      </article>
+
+      <article class="persona-card secondary">
+        <div class="persona-head">
+          <div class="persona-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l3 9 3-9 3 9 3-9"/><path d="M4 20h16"/></svg>
+          </div>
+          <div>
+            <div class="persona-tag">Target Pasar Sekunder</div>
+            <h3>Komunitas Fungsional, Atlet Hybrid &amp; Pecinta HYROX</h3>
+          </div>
+        </div>
+        <p>
+          Gelombang kedua datang dari komunitas yang lebih muda, lebih agresif secara performa, dan sangat loyal terhadap
+          identitas sub-kultur. Mereka adalah atlet hybrid — gabungan strength, endurance, dan mobility — yang mengejar
+          standar global HYROX. Bintaro saat ini <strong>kekurangan fasilitas dengan trek HYROX standar</strong> dan
+          instruktur bersertifikasi internasional; mayoritas komunitas harus berkendara ke Jakarta Selatan atau Tangerang.
+          Emerald Tree dengan area terbuka luasnya menjadi <em>perfect canvas</em> untuk membangun trek fungsional
+          outdoor yang sulit ditiru gym indoor manapun.
+        </p>
+        <ul class="persona-list">
+          <li><strong>Standar HYROX asli:</strong> trek 1 km dengan 8 stasiun fungsi—sled push, wall ball, burpee broad jump, dll.</li>
+          <li><strong>Komunitas pekerja profesional:</strong> sesi pagi (06:00) dan malam (19:00) setelah jam kantor.</li>
+          <li><strong>Event rutin:</strong> HYROX Simulation Day bulanan untuk membangun retensi dan akuisisi word-of-mouth.</li>
+          <li><strong>Coaching hybrid:</strong> program strength + zone 2 cardio + recovery berbasis data.</li>
+          <li><strong>Margin lebih tinggi:</strong> personal training, program kompetisi, dan paket korporat.</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- TREND BLOCK -->
+    <div class="trend-block">
+      <div>
+        <h3>Mengapa <em>Luxury Green Cafe × HYROX × Forest Bathing</em> Adalah Kombinasi Tak Terkalahkan?</h3>
+        <p>
+          Pasca-pandemi, konsumen kebugaran berpindah dari sekadar "membakar kalori" menjadi <strong>mengejar
+          kesejahteraan holistik</strong> — tubuh bertenaga, pikiran tenang, dan ruang yang menyembuhkan. Aliansi kami
+          menyatukan tiga pilar dalam satu lokasi: <strong>pengalaman garden dining premium</strong> ala Emerald Tree,
+          <strong>performa atletis HYROX</strong> di trek outdoor, dan <strong>Shinrin-yoku</strong> (forest bathing)
+          di Zen Deck bawah kanopi pohon dewasa. Tidak ada kompetitor di Bintaro yang menawarkan ketiganya sekaligus.
+        </p>
+        <p>
+          Sinergi ini menciptakan <strong>tiga siklus pendapatan yang saling mengisi</strong>: tamu resto yang
+          penasaran mencoba kelas intro, member gym yang recovery di cafe, dan komunitas wellness yang datang untuk
+          sound healing lalu brunch. <em>One location, three revenue streams, zero acquisition cost.</em>
+        </p>
+      </div>
+      <ul class="trend-bullets">
+        <li>
+          <strong>Tren #1 — Functional Fitness Boom</strong>
+          HYROX tumbuh +47% YoY di Indonesia; komunitas CrossFit &amp; F45 mulai berpindah ke format hybrid racing yang lebih terukur.
+        </li>
+        <li>
+          <strong>Tren #2 — Wellness as Status</strong>
+          Konsumen kelas atas mengganti "luxury goods" dengan "luxury experiences": retreat, sound healing, breathwork.
+        </li>
+        <li>
+          <strong>Tren #3 — Biophilic Design</strong>
+          Riset menunjukkan produktivitas &amp; retensi naik 15% di ruang dengan elemen alam; gym biophilic menjadi diferensiator.
+        </li>
+        <li>
+          <strong>Tren #4 — Privacy-First for Muslimah</strong>
+          Industri modest fashion tumbuh dua digit; permintaan akan fasilitas private wanita ikut naik tajam di kota besar.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAB 2 — ZONASI ============ -->
+<section class="chapter" id="bab2" style="background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 50%, var(--bg) 100%);">
+  <div class="container">
+    <div class="section-head">
+      <div class="chapter-tag"><span class="num">02</span> Bab Dua</div>
+      <h2>Konsep Arsitektural &amp; Zonasi Fasilitas (Garden Wellness)</h2>
+      <p>
+        Emerald Tree Bintaro Sektor 9 memiliki luas area terbuka hijau yang signifikan — tetapi sebagian besar hanya
+        berfungsi sebagai <em>visual ambience</em> resto, bukan <em>revenue-generating space</em>. Bab ini memetakan
+        bagaimana empat zona bisnis baru dijalin ke dalam taman eksisting tanpa mengganggu operasi resto, sekaligus
+        menyelesaikan tantangan teknis tropis Bintaro: hujan lebat mendadak, kelembapan 75–85%, dan paparan UV tinggi.
+      </p>
+    </div>
+
+    <!-- SPATIAL INTRO -->
+    <div class="spatial-intro">
+      <div>
+        <h3>Weatherproofing Taman Eksisting: Forest Atmosphere Tetap Aman, Alat Fitness Tetap Terlindungi</h3>
+        <p>
+          Mempertahankan sensasi <em>outdoor forest</em> sembari melindungi investasi alat fitness premium adalah
+          tantangan rekayasa utama. Solusinya adalah perpaduan <strong>kanopi eco transparan berukuran besar</strong>
+          yang menahan hujan tanpa memblokir cahaya alami, <strong>vertical green screen</strong> dari tanaman merambat
+          permanen yang berfungsi ganda sebagai estetika dan peneduh alami, serta <strong>struktur baja anti-karat
+          hot-dip galvanized</strong> untuk semua frame outdoor. Lantai zona fungsional menggunakan <em>turf track</em>
+          drainase tinggi yang tidak tergenang air bahkan setelah hujan deras 30 menit.
+        </p>
+        <ul class="solutions">
+          <li><strong>Large Transparent Eco-Canopy:</strong> polikarbonat UV-resistant tebal 6 mm, menahan hujan &amp; UV, transmisi cahaya 85%.</li>
+          <li><strong>Vertical Green Screen Permanen:</strong> tanaman merambat (pothot, philodendron) sebagai partisi hidup antar zona.</li>
+          <li><strong>Hot-Dip Galvanized Steel Frame:</strong> struktur tahan karat 15+ tahun di lingkungan tropis lembap.</li>
+          <li><strong>Functional Turf Drainage System:</strong> lantai rumput sintetis drainase cepat, bebas genangan dalam 5 menit pasca-hujan.</li>
+        </ul>
+      </div>
+      <div class="spatial-visual" aria-hidden="true">
+        <div class="zone-mini">
+          <div>
+            <div class="label">ZONA DEPAN</div>
+            <div style="font-size:11px; color:var(--ink-muted); margin-top:4px;">Integrasi Existing Cafe</div>
+          </div>
+          <div class="num">01</div>
+        </div>
+        <div class="zone-mini">
+          <div>
+            <div class="label">ZONA KANAN</div>
+            <div style="font-size:11px; color:var(--ink-muted); margin-top:4px;">Muslimah Sanctuary</div>
+          </div>
+          <div class="num">03</div>
+        </div>
+        <div class="zone-mini">
+          <div>
+            <div class="label">ZONA TENGAH</div>
+            <div style="font-size:11px; color:var(--ink-muted); margin-top:4px;">HYROX Functional Track</div>
+          </div>
+          <div class="num">02</div>
+        </div>
+        <div class="zone-mini">
+          <div>
+            <div class="label">ZONA BELAKANG</div>
+            <div style="font-size:11px; color:var(--ink-muted); margin-top:4px;">Zen Canopy Deck</div>
+          </div>
+          <div class="num">04</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZONE GRID -->
+    <div class="zone-grid">
+      <article class="zone-card">
+        <div class="zone-banner z1">
+          <div class="zlabel">Zona 01 · Front Integration</div>
+          <h3>Organic Cafe &amp; Social Hub (Integrasi Existing)</h3>
+          <div class="znum">01</div>
+        </div>
+        <div class="zone-body">
+          <p>
+            Bukan membangun cafe baru — kami <strong>memperluas &amp; mengintegrasikan</strong> setup Emerald Tree
+            yang sudah beroperasi. Menu workout-specific ditambahkan ke menu existing: <em>pre/post-workout meals</em>,
+            <em>clean-label protein elixirs</em>, dan <em>cold-pressed juices</em> ber-margin tinggi. Tamu resto
+            existing menjadi <em>acquisition funnel</em> gratis; member gym menjadi pelanggan F&amp;B loyal.
+            <strong>Sinergi pendapatan tanpa CAPEX F&amp;B tambahan.</strong>
+          </p>
+          <ul class="zone-features">
+            <li>Menu workout-specific: protein smoothie, pre-workout bites, post-workout recovery bowls.</li>
+            <li>Cross-promotion: member gym dapat diskon 15% untuk menu premium Emerald Tree.</li>
+            <li>Reserved lounge corner untuk member dengan Wi-Fi premium &amp; charging station.</li>
+            <li>Retail wellness: pakaian olahraga modest, botol minum stainless, jurnal wellness.</li>
+          </ul>
+          <div class="zone-metrics">
+            <div class="zone-metric"><div class="m-lbl">Margin F&amp;B</div><div class="m-val">65–70%</div></div>
+            <div class="zone-metric"><div class="m-lbl">Kontribusi Pendapatan</div><div class="m-val">± 24%</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="zone-card">
+        <div class="zone-banner z2">
+          <div class="zlabel">Zona 02 · Center</div>
+          <h3>General Functional Gym &amp; Certified HYROX Track</h3>
+          <div class="znum">02</div>
+        </div>
+        <div class="zone-body">
+          <p>
+            Jantung performa fasilitas. Dibangun di area terbuka tengah taman Emerald Tree dengan kanopi eco transparan.
+            Menggabungkan <strong>hybrid timber/steel gym weights premium</strong> — rack kayu jati olahan dengan
+            frame baja galvanized — <strong>functional turf track</strong> standar HYROX, dan coaching elite
+            bersertifikasi internasional. Estetika <em>outdoor forest gym</em> yang Instagram-worthy menjadi
+            <em>differentiator</em> yang tidak bisa ditiru gym indoor manapun.
+          </p>
+          <ul class="zone-features">
+            <li>Hybrid rack: kayu jati solid + structural steel hot-dip galvanized — tahan karat 15+ tahun.</li>
+            <li>Turf track 20 m + sled push zone + wall ball target + ski erg + assault bike.</li>
+            <li>Bar gantung modular outdoor untuk pull-up, muscle-up, dan ring work.</li>
+            <li>Elite coaching: instruktur HYROX Official + S&amp;C Coach bersertifikat NSCA/CSCS.</li>
+          </ul>
+          <div class="zone-metrics">
+            <div class="zone-metric"><div class="m-lbl">Kapasitas Sesi</div><div class="m-val">20 org</div></div>
+            <div class="zone-metric"><div class="m-lbl">Kontribusi Pendapatan</div><div class="m-val">± 36%</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="zone-card">
+        <div class="zone-banner z3">
+          <div class="zlabel">Zona 03 · Right Wing</div>
+          <h3>Private Muslimah &amp; Ladies-Only Sanctuary</h3>
+          <div class="znum">03</div>
+        </div>
+        <div class="zone-body">
+          <p>
+            Kuadran hijau terisolasi secara visual — dibangun di sudut taman Emerald Tree yang dikelilingi vertical
+            green screen setinggi 2,4 meter, dengan akses terkontrol melalui kartu khusus. Didedikasikan untuk
+            high-class women's group fitness: Pilates, functional circuits, dance cardio. Instruktur 100% wanita
+            bersertifikasi. Estetika <em>garden sanctuary</em> menjaga nuansa resort sambil memastikan <strong>privasi
+            spiritual absolut</strong> untuk hijabers kelas atas Bintaro.
+          </p>
+          <ul class="zone-features">
+            <li>Pilates reformer &amp; mat + barre premium khusus wanita.</li>
+            <li>Functional circuit ringan: dumbbell coated, resistance band, glute bridge station.</li>
+            <li>Vertical green screen 2,4 m sebagai partisi hidup tertutup total.</li>
+            <li>Mushola privat + locker digital + shower berstandar spa resort.</li>
+          </ul>
+          <div class="zone-metrics">
+            <div class="zone-metric"><div class="m-lbl">Keanggotaan Premium</div><div class="m-val">Rp 550K/bln</div></div>
+            <div class="zone-metric"><div class="m-lbl">Kontribusi Pendapatan</div><div class="m-val">± 25%</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="zone-card">
+        <div class="zone-banner z4">
+          <div class="zlabel">Zona 04 · Rear Canopy</div>
+          <h3>The Zen Wellness Deck</h3>
+          <div class="znum">04</div>
+        </div>
+        <div class="zone-body">
+          <p>
+            Dek kayu solid yang diintegrasikan di bawah <strong>pohon-pohon shade dewasa</strong> eksisting Emerald
+            Tree — bukan kanopi buatan, melainkan kanopi alami yang sudah ada puluhan tahun. Ruang pemulihan kelas
+            atas untuk high-end Yoga, Mindfulness, Sound Healing, dan Breathwork workshops. Margin tertinggi karena
+            instruktur spesialis premium &amp; tanpa CAPEX alat mahal. Inilah <em>signature visual</em> brand.
+          </p>
+          <ul class="zone-features">
+            <li>Hardwood deck elevated (merbau/bengkirai) di bawah kanopi pohon alami.</li>
+            <li>Yoga Hatha, Vinyasa, Yin — sesi pagi (06:30) &amp; senja (17:30).</li>
+            <li>Sound healing bulanan: crystal singing bowl, gong, &amp; breathwork Wim Hof.</li>
+            <li>Private session 1-on-1 dengan tarif Rp 350K–500K/sesi.</li>
+          </ul>
+          <div class="zone-metrics">
+            <div class="zone-metric"><div class="m-lbl">Margin Tertinggi</div><div class="m-val">± 72%</div></div>
+            <div class="zone-metric"><div class="m-lbl">Kontribusi Pendapatan</div><div class="m-val">± 15%</div></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAB 3 — PARTNERSHIP & RISK ============ -->
+<section class="chapter" id="bab3">
+  <div class="container">
+    <div class="section-head">
+      <div class="chapter-tag"><span class="num">03</span> Bab Tiga</div>
+      <h2>Skema Aliansi, Model Bagi Hasil &amp; Manajemen Risiko</h2>
+      <p>
+        Negosiasi dengan manajemen Emerald Tree bukan transaksi <em>landlord-tenant</em> biasa — kedua belah pihak
+        memiliki aset yang saling melengkapi: Emerald Tree punya lahan + brand + pelanggan, kami punya konsep gym +
+        operasional + komunitas HYROX. Struktur kontrak yang salah akan merusak sinergi ini. Bab ini membandingkan tiga
+        skema dengan transparan, lalu memetakan risiko fisik &amp; legal yang wajib diselesaikan dalam 30 hari pertama.
+      </p>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Dimensi Strategis</th>
+            <th>
+              <span class="opt-tag">Opsi A</span>
+              Bagi Hasil Murni
+              <div style="font-size:11px; color:var(--ink-muted); font-weight:400; margin-top:4px;">Pure Revenue/Profit Sharing</div>
+            </th>
+            <th class="recommended">
+              <span class="opt-tag">Opsi B · Direkomendasikan</span>
+              KSO Equity
+              <div style="font-size:11px; color:var(--ink-muted); font-weight:400; margin-top:4px;">Joint Venture Operational</div>
+              <span class="rec-pill">PILIHAN UTAMA</span>
+            </th>
+            <th>
+              <span class="opt-tag">Opsi C</span>
+              Sewa Spasial + Kickback
+              <div style="font-size:11px; color:var(--ink-muted); font-weight:400; margin-top:4px;">Spatial Lease + Revenue Kickback</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modal Awal</td>
+            <td>Sangat rendah — hanya CAPEX equipment &amp; interior zona gym.</td>
+            <td>Sedang — perlu modal kerja + saham untuk Emerald Tree sebagai equity.</td>
+            <td>Sedang — biaya sewa flat below-market + CAPEX equipment.</td>
+          </tr>
+          <tr>
+            <td>Biaya Lahan di Depan</td>
+            <td>Zero — tidak ada sewa, tidak ada akuisisi.</td>
+            <td>Zero — lahan dijadikan penyertaan modal saham.</td>
+            <td>Flat lease below-market (± 60% harga pasar komersial).</td>
+          </tr>
+          <tr>
+            <td>Risiko &amp; Reward</td>
+            <td>Sejajar — risiko dibagi berdasarkan total membership sales.</td>
+            <td>Tersebar antara kedua pihak; tata kelola bersama di board JV.</td>
+            <td>Risiko operasional di operator; Emerald Tree dapat fixed income + upside.</td>
+          </tr>
+          <tr>
+            <td>Porsi Bagi Hasil</td>
+            <td>65% operator / 35% Emerald Tree dari total membership sales.</td>
+            <td>Saham 60/40 berdasarkan valuasi aset + kerja operasional.</td>
+            <td>Fixed lease + 8–12% dari cross-sales cafe gym member.</td>
+          </tr>
+          <tr>
+            <td>Kontrol Operasional</td>
+            <td>Penuh atas gym; Emerald Tree tetap kelola resto secara independen.</td>
+            <td>Penuh atas operasional harian; strategi via board bersama.</td>
+            <td>Penuh atas gym &amp; menu workout-specific; resto tetap independen.</td>
+          </tr>
+          <tr>
+            <td>Sinergi Cross-Sell</td>
+            <td>Tinggi — incentive sejajar karena revenue gym berdampak ke F&amp;B.</td>
+            <td>Tertinggi — kedua pihak adalah shareholder, sinergi maksimal.</td>
+            <td>Sedang — kickback cafe mendorong kerjasama tapi tidak terlalu dalam.</td>
+          </tr>
+          <tr>
+            <td>Flexibility Exit</td>
+            <td>Tinggi — cukup hentikan operasi gym &amp; relokasi alat.</td>
+            <td>Sedang — butuh negosiasi buy-out saham Emerald Tree.</td>
+            <td>Tinggi — selesai masa sewa, bisa mundur tanpa komplikasi.</td>
+          </tr>
+          <tr>
+            <td>Rekomendasi Skenario</td>
+            <td>Validasi konsep awal tanpa komitmen modal besar.</td>
+            <td>Skala pasca-bukti konsep (post-MVP, tahun ke-2).</td>
+            <td>Alternatif jika Emerald Tree menolak bagi hasil &amp; KSO.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="compare-footnote">
+        Catatan strategis: Opsi B (KSO Equity) direkomendasikan sebagai model utama karena menciptakan <em>aligned
+        incentive</em> terkuat — Emerald Tree sebagai shareholder akan aktif mempromosikan gym ke pelanggan existing-nya.
+        Opsi A ideal untuk fase validasi 8-minggu pertama; Opsi C adalah <em>plan B</em> jika Emerald Tree menolak
+        struktur equity namun tetap ingin monetisasi area underutilized.
+      </div>
+    </div>
+
+    <!-- RISK MANAGEMENT ALERT -->
+    <div class="risk-box" role="alert">
+      <div class="risk-head">
+        <div class="risk-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="risk-sub">30-Day Mandatory Feasibility Study</div>
+          <h3>Wajib Dinitigasi Sebelum Kontrak 30 Hari Pertama Ditandatangani</h3>
+        </div>
+      </div>
+      <p>
+        Mengintegrasikan gym ke dalam taman resto eksisting bukan sekadar masalah desain — ia melibatkan <strong>dampak
+        lingkungan, polusi suara silang antara aktivitas gym dan tamu dining, izin tata ruang, dan degradasi alat</strong>.
+        Studi kelayakan fisik &amp; legal 30 hari wajib dilakukan sebelum kontrak aliansi ditandatangani. Empat risiko
+        di bawah ini jika diabaikan akan menggerus margin operasional 20–28% per tahun dan berpotensi memicu sengketa
+        operational dengan manajemen Emerald Tree di tahun pertama.
+      </p>
+      <div class="risk-grid">
+        <div class="risk-item">
+          <span class="ri-tag">Risiko 01</span>
+          <h4>Dampak Lingkungan &amp; Ekosistem Taman</h4>
+          <p>
+            Konstruksi zona gym akan mengubah drainase alami taman, akar pohon dewasa, dan habitat burung/kupu-kupu
+            yang menjadi daya tarik utama Emerald Tree.
+            <strong>Mitigasi:</strong> audit ekologi mandatori di Minggu 1, pilih konstruksi <em>non-invasive</em>
+            (deck on stilts tanpa pondasi beton dalam), rancang ulang drainase berkelanjutan, dan konsultasi dengan
+            arborist untuk perlindungan akar pohon.
+          </p>
+        </div>
+        <div class="risk-item">
+          <span class="ri-tag">Risiko 02</span>
+          <h4>Polusi Suara: Gym vs Dining Experience</h4>
+          <p>
+            Bunyi bumper plate jatuh, musik HYROX berenergi tinggi, dan instruksi coach via megaphone akan merusak
+            suasana <em>garden dining</em> Emerald Tree yang tenang — ini risiko reputasi tertinggi.
+            <strong>Mitigasi:</strong> zonasi buffer akustik (zona gym minimal 15 m dari area dining utama),
+            instalasi <em>acoustic baffle</em> dari kayu, batasi sesi high-intensity di jam dining puncak (12:00–14:00 &amp;
+            18:00–20:00), dan gunakan dumbbell coated bumper plate ber-reduksi noise.
+          </p>
+        </div>
+        <div class="risk-item">
+          <span class="ri-tag">Risiko 03</span>
+          <h4>Izin Tata Ruang &amp; Perubahan Fungsi Lahan</h4>
+          <p>
+            Lahan Emerald Tree terdaftar sebagai resto/komorsial. Penambahan fasilitas gym &amp; wellness memerlukan
+            perubahan fungsi pada PBG (Persetujuan Bangunan Gedung) &amp; izin lingkungan.
+            <strong>Mitigasi:</strong> audit legalitas IMB/PBG eksisting Minggu 1–2, ajukan permohonan perubahan
+            fungsi via OSS, dan pastikan klausa kontrak mengikat Emerald Tree turut bertanggung jawab atas legalisasi
+            fisik awal sebelum renovasi dimulai.
+          </p>
+        </div>
+        <div class="risk-item">
+          <span class="ri-tag">Risiko 04</span>
+          <h4>Degradasi Alat Fitness oleh Kelembapan Tropis</h4>
+          <p>
+            Kelembapan 75–85% Bintaro akan mengkaratkan bearing sled, kabel mesin, dan frame baja karbon dalam 6–9
+            bulan tanpa perlindungan.
+            <strong>Mitigasi:</strong> pilih alat dengan coating stainless electroplated atau hot-dip galvanized,
+            pasang dehumidifier industrial di storage zone, inspeksi berkala mingguan, dan sediakan anggaran
+            replacement 5%/tahun dari nilai aset equipment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAB 4 — TIMELINE ============ -->
+<section class="chapter" id="bab4" style="background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);">
+  <div class="container">
+    <div class="section-head">
+      <div class="chapter-tag"><span class="num">04</span> Bab Empat</div>
+      <h2>Garis Waktu Rencana Aksi Eksekusi (8-Week Roadmap)</h2>
+      <p>
+        Roadmap 8 minggu ini disusun untuk eksekusi aliansi dengan Emerald Tree — bukan membangun dari nol. Setiap fase
+        dirancang dengan deliverable konkret yang dapat diaudit oleh investor dan tim direksi. Kegagalan menyelesaikan
+        satu fase akan men-trigger eskalasi langsung ke komite eksekutif. Pendekatan ini meminimalkan <em>burn rate</em>
+        di depan sembar memaksimalkan validasi pasar sebelum CAPEX besar dicairkan.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <!-- PHASE 1 -->
+      <div class="tl-phase p1">
+        <div class="tl-phase-inner">
+          <div class="tl-content">
+            <span class="tl-phase-tag">Fase Validasi &amp; Audit Spasial</span>
+            <h3>Membuktikan bahwa taman Emerald Tree sungguh-sungguh siap di-tap-in.</h3>
+            <p>
+              Dua minggu pertama fokus pada pengukuran presisi: luas aktual area terbuka dalam m², kapasitas beban
+              struktur, kondisi akar pohon dewasa, alignment utilitas (listrik, air, drainase), dan validasi minat
+              pasar via pre-survey ke pelanggan existing Emerald Tree. Tidak ada uang dibakar untuk renovasi sebelum
+              data ini lengkap dan disetujui komite eksekutif.
+            </p>
+            <div class="tl-deliv"><strong>Deliverable:</strong> Laporan Audit Spasial m², Investor Deck v1.0, Term Sheet Awal Aliansi.</div>
+          </div>
+          <div class="tl-node">
+            <div class="tl-week">1–2<span class="small">MGG</span></div>
+          </div>
+          <div class="tl-empty"></div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="tl-phase p2">
+        <div class="tl-phase-inner">
+          <div class="tl-empty"></div>
+          <div class="tl-node">
+            <div class="tl-week">3–5<span class="small">MGG</span></div>
+          </div>
+          <div class="tl-content right">
+            <span class="tl-phase-tag">Fase Legal &amp; Financial Closing</span>
+            <h3>Mengunci rasio bagi hasil, kontrak KSO, &amp; desain boundary zona Muslimah.</h3>
+            <p>
+              Tim hukum menyerang dari dua sisi: finalisasi rasio revenue-sharing atau equity-sharing dengan manajemen
+              Emerald Tree, serta penyusunan kontrak <em>joint-operation</em> yang mengatur hak &amp; kewajiban kedua
+              pihak. Paralel dengan itu, desain boundary zona Muslimah (privasi total) dan zona HYROX (buffer akustik)
+              dikunci agar tidak menjadi sumber konflik operasional di kemudian hari. Kontrak ditandatangani paling
+              lambat akhir Minggu 5.
+            </p>
+            <ul class="tl-tasks">
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Finalisasi rasio bagi hasil (Opsi A) atau rasio saham KSO (Opsi B) dengan Emerald Tree.</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Penyusunan &amp; penandatanganan kontrak <em>Joint-Operation Agreement</em> + akta notaris.</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Desain &amp; lock-in boundary zona Muslimah (vertical green screen 2,4 m, akses terkontrol).</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Pengajuan PBG &amp; izin perubahan fungsi via OSS, klarifikasi slauses asuransi bersama.</li>
+            </ul>
+            <div class="tl-deliv"><strong>Deliverable:</strong> Kontrak Aliansi Final, Desain Boundary Muslimah, SPV Legale Terbentuk.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="tl-phase p3">
+        <div class="tl-phase-inner">
+          <div class="tl-content">
+            <span class="tl-phase-tag">Fase Pre-Launch &amp; Community Pre-Sales</span>
+            <h3>Merekrut instruktur elite &amp; mengunci <em>Founding Members</em> Bintaro.</h3>
+            <p>
+              Tiga minggu terakhir fokus pada akuisisi pelanggan awal &amp; pengisian tim coaching. Rekrutmen
+              instruktur HYROX Official, S&amp;C Coach bersertifikat, dan instruktur wanita bersertifikasi untuk zona
+              Muslimah menjadi prioritas. Paralel dengan itu, slot <em>Founding Member</em> eksklusif dibuka untuk ibu
+              Bintaro &amp; komunitas HYROX lokal dengan harga perkenalan + benefit eksklusif seumur hidup. Pre-launch
+              garden event menjadi puncak fase ini.
+            </p>
+            <ul class="tl-tasks">
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Rekrutmen instruktur elite: HYROX Official, S&amp;C Coach NSCA/CSCS, instruktur wanita Pilates.</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Pembukaan high-ticket Founding Member slots (kuota 100, harga Rp 3,5 jt untuk 6 bulan).</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Pre-launch wellness garden event eksklusif di Emerald Tree: demo kelas, talkshow, brunch.</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> PO alat fitness lead-time panjang + kickoff vendor renovation dengan SLA ketat.</li>
+            </ul>
+            <div class="tl-deliv"><strong>Deliverable:</strong> 100 Founding Members, Tim Coach Terbentuk, PO Alat &amp; Vendor Renovasi.</div>
+          </div>
+          <div class="tl-node">
+            <div class="tl-week">6–8<span class="small">MGG</span></div>
+          </div>
+          <div class="tl-empty"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="closing" id="closing">
+      <div class="closing-inner">
+        <h2>Siap Mengubah Taman Emerald Tree Menjadi <em>Ekosistem Wellness Bernilai Miliaran?</em></h2>
+        <p>
+          Blueprint aliansi ini bukan dokumen statis. Ia adalah peta eksekusi 8 minggu yang dapat diaudit setiap pekan
+          oleh investor dan tim direksi. Langkah berikutnya: presentasikan versi final kepada manajemen Emerald Tree
+          dan investor jangka pendek, lalu kunci kontrak aliansi dalam 30 hari ke depan.
+        </p>
+        <div class="closing-btns">
+          <a href="#bab1" class="btn-primary">Mulai dari Bab 01</a>
+          <a href="#bab3" class="btn-ghost">Lihat Skema Aliansi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="container foot-grid">
+    <div class="foot-meta">
+      <strong>Forest Wellness Gym &amp; Community Hub</strong> — × Emerald Tree Bintaro Sektor 9 · Integrated Blueprint v2.0
+    </div>
+    <div class="foot-conf">Confidential · For Investor &amp; Board Review Only</div>
+  </div>
+</footer>
+
+</body>
+</html>
